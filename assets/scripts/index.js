@@ -2,7 +2,6 @@
 
 import { select, print, onEvent } from "./utils.js";
 
-// selecting Inputs
 const moviesInput = select(".search-movies");
 const cityInput = select(".search-cities");
 
@@ -12,11 +11,9 @@ let listCities = select(".autoFill-city");
 moviesInput.value = "";
 cityInput.value = "";
 
-// URLs for external json files
 const moviesUrl = "./assets/scripts/movies.json";
 const citiesUrl = "./assets/scripts/cities.json";
 
-// Options for fetch
 const options = {
   method: "GET",
   headers: {
@@ -53,7 +50,6 @@ async function getMovies() {
     }
     getInfo(data.results);
 
-    // Functions for auto-completion inputs
     function autoInputs(array, input) {
       onEvent( "keyup", input, function () {
         let inputValue = input.value.toLowerCase();
@@ -79,13 +75,9 @@ async function getMovies() {
 
 getMovies();
 
-// Remove dropdown
 function removeDropdown(input, list) {
   if (input.value.length === 0) list.innerHTML = "";
 }
-
-
-// fetching cities
 
 async function getCities() {
   try {
