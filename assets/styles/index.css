@@ -37,7 +37,7 @@ h1 {
   letter-spacing: 0.2px;
 }
 
-nav {
+header nav {
   width: 50%;
   text-align: right;
 }
@@ -167,7 +167,7 @@ button:hover {
 }
 
 .grid-container {
-  margin-top: 50px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px 20px;
@@ -175,19 +175,19 @@ button:hover {
 
 .grid-item {
   text-align: center;
-  height: 330px;
+  height: 300px;
   cursor: pointer;
   z-index: 1111;
 }
 
 .grid-item img {
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .grid-item p {
   color: #fff;
-  margin-top: 5px;
-  font-size: 18px;
+  margin-top: 6px;
+  font-size: 14px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -202,7 +202,7 @@ footer {
 }
 
 .fa {
-  padding: 20px;
+  padding: 10px;
   font-size: 30px;
   width: 50px;
   color: #fff;
@@ -215,8 +215,9 @@ footer {
 }
 
 .icons {
-  text-align: left;
+  text-align: center;
   color: #fff;
+  margin-top: 40px;
 }
 
 nav li {

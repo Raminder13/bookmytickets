@@ -8,13 +8,8 @@
 
 import { select, print, onEvent } from "./utils.js";
 
-<<<<<<< HEAD
 const moviesTerm = select(".search-movies");
 const cityTerm = select(".search-cities");
-=======
-const moviesInput = select(".search-movies");
-const cityInput = select(".search-cities");
->>>>>>> f8bc773827abd54ac2f98cf31ee38d57323eae06
 
 let moviesList = select(".autoFill-movie");
 let citieslist = select(".autoFill-city");
@@ -88,11 +83,8 @@ function removeDropdown(input, list) {
   if (input.value.length === 0) list.innerHTML = "";
 }
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> f8bc773827abd54ac2f98cf31ee38d57323eae06
 async function getCities() {
   try {
     const response = await fetch(citiesUrl, options);
