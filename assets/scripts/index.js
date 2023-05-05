@@ -8,14 +8,14 @@
 
 import { select, print, onEvent } from "./utils.js";
 
-const moviesInput = select(".search-movies");
-const cityInput = select(".search-cities");
+const moviesTerm = select(".search-movies");
+const cityTerm = select(".search-cities");
 
-let listmovies = select(".autoFill-movie");
-let listCities = select(".autoFill-city");
+let moviesList = select(".autoFill-movie");
+let citieslist = select(".autoFill-city");
 
-moviesInput.value = "";
-cityInput.value = "";
+moviesTerm.value = "";
+cityTerm.value = "";
 
 const moviesUrl = "./assets/scripts/movies.json";
 const citiesUrl = "./assets/scripts/cities.json";
@@ -31,10 +31,8 @@ const options = {
 async function getMovies() {
   try {
     const response = await fetch(moviesUrl, options);
-
     if (!response.ok)
       throw new Error(`${response.statusText} ${response.status}`);
-
     const data = await response.json();
     const grid = select(".grid-container");
     
@@ -47,7 +45,7 @@ async function getMovies() {
         <div class="poster">
         <img
         src="${element.img}"
-        alt="movie-poster"
+        alt="image"
         />
         </div>
         <p class="movie-title">${element.title}</p>
@@ -62,18 +60,18 @@ async function getMovies() {
 
         if (inputValue.length === 0) return;
 
-        listmovies.innerHTML = " ";
+        moviesList.innerHTML = " ";
 
         array.forEach((el) => {
           if (
             el.title.substr(0, inputValue.length).toLowerCase() === inputValue
           ) {
-            listmovies.innerHTML += `<li><button>${el.title}</button></li>`;
+            moviesList.innerHTML += `<li><button>${el.title}</button></li>`;
           }
         });
       });
     }
-    autoInputs(data.results, moviesInput);
+    autoInputs(data.results, moviesTerm);
   } catch (error) {
     print(error.message);
   }
@@ -102,20 +100,19 @@ async function getCities() {
 
         if (inputValue.length === 0) return;
 
-        listCities.innerHTML = " ";
+        citieslist.innerHTML = " ";
 
         array.forEach((el) => {
           if (
             el.name.substr(0, inputValue.length).toLowerCase() === inputValue
           ) {
-            listCities.innerHTML += `<li><button>${el.name}</button></li>`;
+            citieslist.innerHTML += `<li><button>${el.name}</button></li>`;
           }
         });
       });
     }
 
-    
-    autoInput(data.cities, cityInput);
+    autoInput(data.cities, cityTerm);
   } catch (error) {
     print(error.message);
   }
