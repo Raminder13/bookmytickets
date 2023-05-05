@@ -90,10 +90,6 @@ nav ul li + li {
   flex-shrink: 1;
 }
 
-.hidden {
-  display: none;
-}
-
 .search {
   color: #fff;
   font-size: 16px;
@@ -127,7 +123,7 @@ nav ul li + li {
 }
 
 .search-cities {
-  width: 65%;
+  width: 60%;
   background-image: url("../images/location.png");
 }
 
@@ -136,11 +132,11 @@ nav ul li + li {
   width: 25%;
   border: 10px;
   margin-left: 10px;
-  border-radius: 10px;
+  border-radius: 4px;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 800;
-  background-color: #ef8401;
+  background-color: #d0770a;
   color: #fff;
   transition: all 0.2s ease-in-out;
   padding: 0 15px;
@@ -159,7 +155,7 @@ button {
   padding: unset;
   font-size: 18px;
   width: 200px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid #c9c6c6;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -284,6 +280,10 @@ nav li {
 
   .movie {
     width: 97%;
+  }
+
+  footer {
+    justify-content: space-around;
   }
 }
 
