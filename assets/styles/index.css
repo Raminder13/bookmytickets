@@ -136,7 +136,7 @@ nav ul li + li {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 800;
-  background-color: #d0770a;
+  background-color: #062661;
   color: #fff;
   transition: all 0.2s ease-in-out;
   padding: 0 15px;
@@ -144,7 +144,7 @@ nav ul li + li {
 }
 
 .search-btn:hover {
-  background-color: #c86100;
+  background-color: #1077b2;
 }
 
 button {
@@ -227,7 +227,7 @@ nav li {
 
 .autoFill-movie,
 .autoFill-city {
-  margin-top: 2px;
+  margin-top: 1px;
   position: absolute;
   z-index: 9999;
   margin-left: 50px;
